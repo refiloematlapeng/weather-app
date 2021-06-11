@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:background="#10ffffff"
+    android:paddingLeft="10sp"
+    android:paddingRight="10sp"
+    android:paddingTop="16sp"
+    android:layout_margin="2dp"
+    android:paddingBottom="16sp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!--this text view will contain all the coming days name -->
+    <TextView
+        android:id="@+id/nextDayId"
+        style="@style/forecastDay"
+        android:textAlignment="viewStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:fontFamily="sans-serif"
+        android:textSize="20sp"
+        android:textColor="#90ffffff"
+        android:text="@string/defDay" />
+
+
+    <!-- this image view will contain the icon that will identifier the weather type -->
+    <ImageView
+        android:background="@android:color/transparent"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/partlysunny2x"
+        android:id="@+id/weatherIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <!-- this will contain the weather temperature -->
+    <TextView
+        android:id="@+id/weatherTemp"
+        style="@style/forecastDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/defaultWeatherValue" />
+
+</RelativeLayout>
