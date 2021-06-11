@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/UIScreenView">
+
+    <!-- this is a background area that will contain a png of weather-->
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!--this is the background picture that will identifier the weather -->
+        <ImageView
+            android:id="@+id/WeatherBackgroundPng"
+            style="@style/wheaterBackgroudPng"
+            />
+
+        <!--this linear layout will contain the min,current,max weather -->
+        <TableLayout
+            android:layout_marginTop="10sp"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- this row of table will contan the current,min and max temp -->
+            <TableRow
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/minTemp"
+                    style="@style/currentUnitView"
+                    android:layout_width="100sp"
+                    android:layout_height="match_parent"
+                    android:layout_column="1"
+                    android:text="@string/defaultUnit"
+                    android:textAlignment="textStart" />
+
+                <TextView
+                    android:id="@+id/currentTemp"
+                    style="@style/currentUnitView"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/defaultUnit" />
+
+                <TextView
+                    android:id="@+id/maxTemp"
+                    style="@style/currentUnitView"
+                    android:textAlignment="textEnd"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/defaultUnit" />
+            </TableRow>
+
+
+            <TableRow
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <TextView
+                    style="@style/currentUnitView"
+                    android:textAlignment="textStart"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:fontFamily="sans-serif-medium"
+                    android:paddingBottom="12sp"
+                    android:text="min" />
+
+                <TextView
+                    style="@style/currentUnitView"
+                    android:layout_width="180sp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/current"
+                    android:paddingBottom="12sp"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    style="@style/currentUnitView"
+                    android:textAlignment="textEnd"
+                    android:layout_width="100sp"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    android:text="@string/max"
+                    android:paddingBottom="12sp"
+                    android:fontFamily="sans-serif-medium"/>
+            </TableRow>
+
+        </TableLayout>
+
+
+        <!--this is devider line-->
+        <View
+            android:id="@+id/aliveBar"
+            android:layout_width="match_parent"
+            android:layout_height="3sp"
+            android:background="#50ffffff"/>
+
+
+
+        <!-- here we put the listview that will display the forecast weather of 5 days -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:background="@android:color/transparent"
+            android:layout_marginTop="10sp"
+            android:id="@+id/forecastListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+
+    <!--this area will fist be on top of the background
+    and it will help to display information about the current wheater -->
+    <ScrollView
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_alignParentTop="true"
+            android:background="@android:color/transparent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_alignParentTop="true"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--this is a seeting button that will help user to perform more actions -->
+                <ImageButton
+                    style="@style/settingButton"
+                    android:id="@+id/savedLocation"
+                    />
+
+                <!--this is a seeting button that will help user to perform more actions -->
+                <ImageButton
+                    style="@style/savedLocationButton"
+                    android:id="@+id/settingBnt"
+                    />
+            </RelativeLayout>
+
+
+
+
+            <!-- this are will contain thw current temp (min and max) -->
+            <LinearLayout
+                android:id="@+id/viewCurrentWeather"
+                android:orientation="vertical"
+                android:layout_marginTop="90sp"
+                android:background="@android:color/transparent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    style="@style/UIlocationName"
+                    android:id="@+id/locationName"/>
+
+                <TextView
+                    style="@style/UIWeatherType"
+                    android:id="@+id/UIWeatherType"/>
+
+                <TextView
+                    style="@style/currentWeatherUnitStyle"
+                    android:id="@+id/currentWeaterUnit"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="1sp"
+    android:id="@+id/lineView"
+    android:layout_marginBottom="10sp"
+    android:padding="10sp"
+    android:background="#90000000"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <!-- this is the first line that show the city name -->
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cityName"
+            style="@style/cityNameAndAutoDetc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/locName"/>
+
+        <TextView
+            style="@style/cityNameAndAutoDetc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/autoDetect"/>
+
+        <ImageView
+            android:background="@android:color/transparent"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:contentDescription="@string/autoDetect"
+            android:src="@drawable/ic_baseline_location_on_24"/>
+    </LinearLayout>
+
+
+    <!-- this is the second line view-->
+    <LinearLayout
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/cityNameView"
+            android:text="@string/countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/cityNameAndAutoDetcdet"/>
+
+        <TextView
+            android:id="@+id/countryName"
+            android:text="@string/countryName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/cityNameAndAutoDetcdet"/>
+
+
+        <!--this text view will contain the temp -->
+        <TextView
+            android:id="@+id/minAndMaxTemp"
+            android:text="@string/temp"
+            android:paddingLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/cityNameAndAutoDetcdet"/>
+
+    </LinearLayout>
+
+</LinearLayout>

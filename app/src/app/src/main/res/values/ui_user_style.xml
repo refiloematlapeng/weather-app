@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- this file will contain the ui user style-->
+<resources>
+
+    <!--wheather png style -->
+    <style name="wheaterBackgroudPng">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@drawable/forest_sunny</item>
+    </style>
+
+    <!--this is a style for the setting button-->
+    <style name="settingButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_baseline_location_on_24</item>
+        <item name="android:layout_marginTop">35sp</item>
+        <item name="android:layout_marginLeft">15sp</item>
+    </style>
+
+
+    <!--this is a style for the setting button-->
+    <style name="savedLocationButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@drawable/ic_baseline_settings_24</item>
+        <item name="android:layout_marginTop">35sp</item>
+        <item name="android:layout_marginRight">15sp</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+
+    <style name="currentWeatherUnitStyle">
+        <item name="background">@android:color/transparent</item>
+        <item name="android:textSize">80sp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:text">@string/defaultWeatherValue</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="fontFamily">@font/segoe_ui</item>
+        <item name="android:layout_marginTop">30sp</item>
+    </style>
+
+
+
+
+    <!--this is a style for the text view that shows the location name -->
+    <style name="UIlocationName">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:text">@string/defaultLocationName</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">35sp</item>
+        <item name="android:fontFamily">@font/segoe_ui</item>
+    </style>
+
+
+
+    <style name="UIWeatherType">
+        <item name="android:textAlignment">center</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/defaultWeatherType</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+
+
+
+    <style name="currentUnitView">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#fffffff1</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+
+
+
+    <!--here we create the style of forecast weather -->
+    <style name="forecastDay">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">@font/segoe_ui</item>
+    </style>
+
+    
+
+    <!-- text about confortable textView style-->
+    <style name="confLevelSt">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:paddingTop">15sp</item>
+        <item name="android:paddingBottom">10sp</item>
+        <item name="android:paddingLeft">20sp</item>
+        <item name="android:paddingRight">10sp</item>
+    </style>
+
+
+
+    <style name="tempMainElement">
+        <item name="android:textSize">15sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+    <style name="tempMainElementTemp">
+        <item name="android:textSize">18sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:text">@string/defaultWeatherValue</item>
+        <item name="background">@android:color/transparent</item>
+    </style>
+
+
+    <!--style about sunrise and sunset -->
+    <style name="sunsSt">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">#80ffffff</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">10sp</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+
+
+
+    <!-- style of favorite lis view-->
+    <style name="cityNameAndAutoDetc">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+
+    <style name="cityNameAndAutoDetcdet">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+</resources>
